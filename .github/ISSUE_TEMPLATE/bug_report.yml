@@ -1,0 +1,50 @@
+name: Bug Report
+description: Report a reproducible problem in RepoFox
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: What happened?
+      description: Describe the bug and the behavior you expected instead.
+      placeholder: RepoFox created the branch, but the commit approval never appeared.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Include the exact sequence so we can reproduce it.
+      placeholder: |
+        1. Open a GitHub repo in VS Code
+        2. Save settings in RepoFox
+        3. Click Branch -> PR
+        4. ...
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Share the versions involved.
+      placeholder: |
+        - OS:
+        - VS Code:
+        - Node:
+        - pnpm:
+        - Git:
+        - RepoFox version:
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or screenshots
+      description: Paste relevant errors from the Extension Host console, terminal, or screenshots.
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional context
+      description: Anything else that might help narrow it down.

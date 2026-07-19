@@ -1,0 +1,14 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build:vscode",
+      "type": "shell",
+      "command": "pnpm --filter @repofox/vscode build:dev",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": "$tsc"
+    }
+  ]
+}

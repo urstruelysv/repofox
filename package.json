@@ -1,0 +1,42 @@
+{
+  "name": "repofox",
+  "private": true,
+  "version": "0.0.1",
+  "scripts": {
+    "build": "turbo run build",
+    "build:cli": "pnpm --dir packages/core build && pnpm --dir apps/cli build",
+    "build:vscode": "pnpm --dir apps/vscode build:dev",
+    "build:web": "pnpm --dir apps/web build",
+    "lint": "turbo run lint",
+    "package:vscode": "pnpm --dir apps/vscode package",
+    "check:submission-readme": "node scripts/check-build-week-docs.mjs",
+    "release:vsix": "pnpm verify && pnpm check:submission-readme && pnpm package:vscode",
+    "run:cli": "node apps/cli/dist/index.js",
+    "test:cli": "pnpm --dir apps/cli test",
+    "test": "turbo run test",
+    "format": "prettier --write \"**/*.{ts,tsx,md,json,mjs}\" --ignore-path .gitignore",
+    "format:check": "prettier --check package.json apps/cli/src/config.ts apps/cli/src/index.test.ts apps/cursor/package.json apps/cursor/README.md apps/cursor/src/readme.test.ts apps/vscode/package.json apps/vscode/README.md apps/vscode/src/pr-draft.ts apps/vscode/src/pr-draft.test.ts apps/vscode/src/readme.test.ts apps/vscode/src/workflow-access.ts apps/vscode/src/workflow-access.test.ts apps/vscode/src/package-ignore.test.ts apps/vscode/src/state/StateManager.ts apps/vscode/src/state/StateManager.test.ts apps/vscode/src/sidebar/SidebarProvider.ts apps/vscode/src/types/messages.ts apps/vscode/src/webview/App.tsx packages/core/src/session/index.ts packages/core/src/session/index.test.ts packages/ui/src/components/OperationsHistory/index.tsx packages/ui/src/tokens.ts apps/web/app/page.tsx apps/web/app/globals.css apps/web/next.config.ts apps/web/package.json apps/web/tailwind.config.ts apps/web/components/sections/hero-new.tsx apps/web/components/sections/navbar.tsx apps/web/components/sections/final-cta.tsx apps/web/components/sections/footer.tsx apps/web/components/sections/positioning.tsx apps/web/components/sections/pipeline.tsx apps/web/components/sections/features.tsx apps/web/components/sections/faq-section.tsx apps/web/lib/repo-links.ts apps/web/lib/repo-links.test.ts apps/web/lib/brand-tokens.test.ts apps/web/lib/judge-journey.test.ts README.md BUILT_WITH_CODEX.md CONTRIBUTING.md scripts/check-build-week-docs.mjs",
+    "typecheck": "turbo run typecheck",
+    "verify": "pnpm format:check && pnpm build && pnpm build:cli && pnpm typecheck && pnpm lint && pnpm test && pnpm test:cli"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^8.30.0",
+    "@typescript-eslint/parser": "^8.30.0",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "^15.0.0",
+    "turbo": "^2.0.0",
+    "prettier": "^3.3.0",
+    "typescript": "^5.4.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=9.0.0"
+  },
+  "packageManager": "pnpm@9.0.0",
+  "pnpm": {
+    "overrides": {
+      "react": "18.3.1",
+      "react-dom": "18.3.1"
+    }
+  }
+}

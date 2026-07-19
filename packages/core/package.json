@@ -1,0 +1,67 @@
+
+{
+  "name": "@repofox/core",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./git": {
+      "require": "./dist/git/index.js",
+      "import": "./dist/git/index.js",
+      "types": "./dist/git/index.d.ts"
+    },
+    "./snapshot": {
+      "require": "./dist/snapshot/index.js",
+      "import": "./dist/snapshot/index.js",
+      "types": "./dist/snapshot/index.d.ts"
+    },
+    "./ai": {
+      "require": "./dist/ai/index.js",
+      "import": "./dist/ai/index.js",
+      "types": "./dist/ai/index.d.ts"
+    },
+    "./rag": {
+      "require": "./dist/rag/index.js",
+      "import": "./dist/rag/index.js",
+      "types": "./dist/rag/index.d.ts"
+    },
+    "./github": {
+      "require": "./dist/github/index.js",
+      "import": "./dist/github/index.js",
+      "types": "./dist/github/index.d.ts"
+    },
+    "./workflow": {
+      "require": "./dist/workflow/index.js",
+      "import": "./dist/workflow/index.js",
+      "types": "./dist/workflow/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc --project tsconfig.json",
+    "typecheck": "tsc --project tsconfig.json --noEmit",
+    "test": "vitest run",
+    "lint": "eslint src --ext .ts"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "latest",
+    "@octokit/rest": "^21.0.0",
+    "groq-sdk": "latest",
+    "neverthrow": "^8.0.0",
+    "openai": "latest",
+    "simple-git": "^3.27.0",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "@repofox/config": "workspace:*",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.4.0",
+    "vitest": "^2.0.0"
+  }
+}

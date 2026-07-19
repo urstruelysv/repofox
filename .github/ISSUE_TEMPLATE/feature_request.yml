@@ -1,0 +1,26 @@
+name: Feature Request
+description: Propose a product or developer experience improvement
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem to solve
+      description: What is painful or missing today?
+      placeholder: RepoFox works well for a single push flow, but I need a safer step-by-step review mode.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: Describe the behavior you would like to see.
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Notes on scope
+      description: Mention tradeoffs, alternatives, or why this fits the current MVP.

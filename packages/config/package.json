@@ -1,0 +1,6 @@
+{
+  "name": "@repofox/config",
+  "version": "0.0.1",
+  "private": true,
+  "files": ["tsconfig.base.json", "eslint-base.js", "prettier.config.js"]
+}

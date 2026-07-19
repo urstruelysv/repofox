@@ -1,0 +1,10 @@
+{
+  "extends": "@repofox/config/tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "rootDir": "src",
+    "types": ["node", "vitest"]
+  },
+  "include": ["src"],
+  "exclude": ["src/**/*.test.ts"]
+}

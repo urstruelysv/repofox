@@ -1,0 +1,226 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* RepoFox brand palette */
+  --background: #ffffff;
+  --foreground: #000000;
+
+  --pop-primary: #4f46e5;
+  --pop-secondary: #111827;
+  --pop-accent: #818cf8;
+
+  --pop-black: #000000;
+  --pop-gray-900: #171717;
+  --pop-gray-600: #6e6e73;
+  --pop-gray-400: #a0a0ab;
+  --pop-gray-200: #e4e4e7;
+  --pop-gray-100: #f5f5f5;
+
+  --pop-primary-soft: #e0e7ff;
+
+  /* Background washes */
+  --pop-gradient-1: radial-gradient(
+    50% 75% at 50% 100%,
+    rgb(238, 242, 255) 0%,
+    rgb(255, 255, 255) 100%
+  );
+  --pop-gradient-2: radial-gradient(
+    120% 29% at 50% 100%,
+    rgb(224, 231, 255) 0%,
+    rgb(255, 255, 255) 100%
+  );
+  --pop-gradient-3: radial-gradient(
+    75% 25% at 50% 0px,
+    rgb(255, 247, 237) 0%,
+    rgb(255, 255, 255) 100%
+  );
+  --pop-gradient-dark: linear-gradient(
+    0deg,
+    rgb(23, 23, 23) 0%,
+    rgb(0, 0, 0) 100%
+  );
+
+  /* Animation Easing */
+  --ease-pop: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--background);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family:
+    "Satoshi", var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.3; /* 19.5px / 15px */
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* Typography Scale */
+h1 {
+  font-size: 44px;
+  font-weight: 500;
+  line-height: 44px;
+  letter-spacing: -2.32px;
+}
+
+h2 {
+  font-size: 38px;
+  font-weight: 500;
+  line-height: 38px;
+  letter-spacing: -1.9px;
+}
+
+p {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.text-small {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.text-xs {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+/* Components */
+.pop-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--pop-gray-100);
+  color: var(--pop-black);
+  font-size: 12px;
+  font-weight: 400;
+  padding: 16px 20px;
+  border-radius: 9999px;
+  transition: all 0.2s var(--ease-pop);
+  text-decoration: none;
+}
+
+.pop-button:hover {
+  background-color: var(--pop-gray-200);
+}
+
+.pop-button-primary {
+  background-color: var(--pop-primary);
+  color: white;
+}
+
+.pop-button-primary:hover {
+  background-color: var(--pop-accent);
+}
+
+.pop-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow:
+    rgba(16, 24, 40, 0.08) 0px 12px 16px -4px,
+    rgba(16, 24, 40, 0.03) 0px 4px 6px -2px;
+  padding: 24px;
+}
+
+.pop-input {
+  color: var(--pop-black);
+  border: 1px solid var(--pop-black);
+  border-radius: 0px;
+  font-size: 14px;
+  padding: 12px;
+  width: 100%;
+  background: transparent;
+}
+
+/* Background Utilities */
+.bg-pop-gradient-1 {
+  background: var(--pop-gradient-1);
+}
+.bg-pop-gradient-2 {
+  background: var(--pop-gradient-2);
+}
+.bg-pop-gradient-3 {
+  background: var(--pop-gradient-3);
+}
+.bg-pop-dark {
+  background: var(--pop-gradient-dark);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes floatUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s var(--ease-pop) forwards;
+}
+.animate-float-up {
+  animation: floatUp 0.6s var(--ease-pop) forwards;
+}
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.6s var(--ease-pop),
+    transform 0.6s var(--ease-pop);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--pop-gray-200);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--pop-gray-400);
+}
+
+::selection {
+  background: var(--pop-primary-soft);
+  color: var(--pop-secondary);
+}
