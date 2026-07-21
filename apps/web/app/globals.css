@@ -3,44 +3,23 @@
 @tailwind utilities;
 
 :root {
-  /* RepoFox brand palette */
+  /* Enforced Blue Palette */
+  --primary: rgb(0, 122, 255) !important;
+  --primary-soft: rgb(0, 122, 255 / 0.1) !important;
+  
+  /* Alias for legacy components that rely on specific variable names */
+  --pop-primary: var(--primary) !important;
+  --pop-primary-soft: var(--primary-soft) !important;
+  
   --background: #ffffff;
   --foreground: #000000;
-
-  --pop-primary: #4f46e5;
-  --pop-secondary: #111827;
-  --pop-accent: #818cf8;
-
+  
   --pop-black: #000000;
   --pop-gray-900: #171717;
   --pop-gray-600: #6e6e73;
   --pop-gray-400: #a0a0ab;
   --pop-gray-200: #e4e4e7;
   --pop-gray-100: #f5f5f5;
-
-  --pop-primary-soft: #e0e7ff;
-
-  /* Background washes */
-  --pop-gradient-1: radial-gradient(
-    50% 75% at 50% 100%,
-    rgb(238, 242, 255) 0%,
-    rgb(255, 255, 255) 100%
-  );
-  --pop-gradient-2: radial-gradient(
-    120% 29% at 50% 100%,
-    rgb(224, 231, 255) 0%,
-    rgb(255, 255, 255) 100%
-  );
-  --pop-gradient-3: radial-gradient(
-    75% 25% at 50% 0px,
-    rgb(255, 247, 237) 0%,
-    rgb(255, 255, 255) 100%
-  );
-  --pop-gradient-dark: linear-gradient(
-    0deg,
-    rgb(23, 23, 23) 0%,
-    rgb(0, 0, 0) 100%
-  );
 
   /* Animation Easing */
   --ease-pop: cubic-bezier(0.4, 0, 0.2, 1);
@@ -118,9 +97,7 @@ p {
   text-decoration: none;
 }
 
-.pop-button:hover {
-  background-color: var(--pop-gray-200);
-}
+
 
 .pop-button-primary {
   background-color: var(--pop-primary);
@@ -128,7 +105,10 @@ p {
 }
 
 .pop-button-primary:hover {
-  background-color: var(--pop-accent);
+  opacity: 0.9;
+}
+.pop-button-primary:active {
+  transform: scale(0.98);
 }
 
 .pop-card {

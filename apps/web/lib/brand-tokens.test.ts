@@ -5,9 +5,9 @@ import webTheme from "../tailwind.config";
 
 describe("RepoFox indigo brand tokens", () => {
   it("uses the approved indigo accents in the VS Code UI", () => {
-    expect(tokens.color.border.focus).toBe("#4F46E5");
+    expect(tokens.color.border.focus).toBe("var(--primary)");
     expect(tokens.color.accent).toEqual({
-      primary: "#4F46E5",
+      primary: "var(--primary)",
       hover: "#4338CA",
       active: "#3730A3",
     });
@@ -20,7 +20,7 @@ describe("RepoFox indigo brand tokens", () => {
     };
 
     expect(colors.primary).toEqual({
-      DEFAULT: "#4F46E5",
+      DEFAULT: "var(--primary)",
       hover: "#4338CA",
     });
     expect(colors.pop.accent).toBe("#818CF8");

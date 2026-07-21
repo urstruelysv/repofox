@@ -11,8 +11,8 @@ const config: Config = {
         background: "#ffffff",
         foreground: "#000000",
         primary: {
-          DEFAULT: "#4F46E5",
-          hover: "#4338CA",
+          DEFAULT: "var(--primary)",
+          soft: "var(--primary-soft)",
         },
         pop: {
           black: "#000000",
@@ -20,8 +20,6 @@ const config: Config = {
           "gray-100": "#f5f5f5",
           muted: "#6e6e73",
           border: "#e4e4e7",
-          accent: "#818CF8",
-          coral: "#f97316",
         },
       },
       fontFamily: {

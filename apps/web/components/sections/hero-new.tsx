@@ -47,15 +47,23 @@ export function Hero() {
 
         {/* CTA */}
         <div
-          className="flex flex-col items-center gap-3 mb-16"
+          className="flex flex-col items-center gap-6 mb-16"
           style={{ animation: "heroFadeUp 0.5s ease 0.44s both" }}
         >
-          <a
-            href={vsixUrl}
-            className="pop-button pop-button-primary px-8 py-4 text-[15px] font-semibold shadow-pop hover:-translate-y-0.5 transition-all"
-          >
-            Download VSIX
-          </a>
+          <div className="flex items-center gap-4">
+            <a
+              href={vsixUrl}
+              className="pop-button pop-button-primary px-8 py-4 text-[15px] font-semibold   active:scale-98"
+            >
+              Download VSIX
+            </a>
+            <a
+              href="https://github.com/urstruelysv//repofox"
+              className="text-[14px] text-pop-muted hover:text-[rgb(0,122,255)] transition-colors font-medium"
+            >
+              Set up locally →
+            </a>
+          </div>
           <span className="text-[12px] text-pop-muted">
             VS Code 1.85+ · install without rebuilding the repository
           </span>
@@ -139,7 +147,7 @@ function GitGraph() {
         <path
           d="M 160 100 Q 190 100 210 70 L 400 70 Q 420 70 440 100"
           fill="none"
-          stroke="#4F46E5"
+          stroke="var(--primary)"
           strokeWidth="2"
           strokeLinecap="round"
           strokeDasharray="1000"
@@ -195,7 +203,7 @@ function GitGraph() {
             cx={440}
             cy={100}
             r={8}
-            fill="#4F46E5"
+            fill="var(--primary)"
             filter="url(#rf-glow-i)"
           />
           <circle cx={440} cy={100} r={4} fill="#fff" />
@@ -232,7 +240,7 @@ function GitGraph() {
               cy={70}
               r={7}
               fill="#fff"
-              stroke="#4F46E5"
+              stroke="var(--primary)"
               strokeWidth={2}
             />
           </g>
@@ -270,7 +278,7 @@ function GitGraph() {
             textAnchor="middle"
             fontFamily="monospace"
             fontSize={9}
-            fill="#4F46E5"
+            fill="var(--primary)"
           >
             feat/auth
           </text>
@@ -285,7 +293,7 @@ function GitGraph() {
             textAnchor="middle"
             fontFamily="monospace"
             fontSize={9}
-            fill="#4F46E5"
+            fill="var(--primary)"
           >
             add login
           </text>
@@ -339,7 +347,7 @@ function GitGraph() {
             width={122}
             height={32}
             rx={16}
-            fill="#4F46E5"
+            fill="var(--primary)"
             filter="url(#rf-glow-i)"
           />
           <text
@@ -358,7 +366,7 @@ function GitGraph() {
             y1={76}
             x2={600}
             y2={93}
-            stroke="#4F46E5"
+            stroke="var(--primary)"
             strokeWidth={1.5}
             strokeDasharray="3,2"
             opacity={0.5}
@@ -379,7 +387,7 @@ function GitGraph() {
             fontFamily="Inter,sans-serif"
             fontSize={9}
             fontWeight={600}
-            fill="#4F46E5"
+            fill="var(--primary)"
           >
             you approve ↑
           </text>
