@@ -1,5 +1,7 @@
 import { Navbar } from "@/components/sections/navbar";
 import { Hero } from "@/components/sections/hero-new";
+import { DemoVideo } from "@/components/sections/demo-video";
+import { WorksEverywhere } from "@/components/sections/works-everywhere";
 import { Positioning } from "@/components/sections/positioning";
 import { Pipeline } from "@/components/sections/pipeline";
 import { Features } from "@/components/sections/features";
@@ -12,6 +14,8 @@ export default function Home() {
     <main style={{ minHeight: "100vh" }}>
       <Navbar />
       <Hero />
+      <DemoVideo />
+      <WorksEverywhere />
       <Positioning />
       <Pipeline />
       <Features />

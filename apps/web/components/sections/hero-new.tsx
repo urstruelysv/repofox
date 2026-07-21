@@ -31,9 +31,9 @@ export function Hero() {
           }}
           className="font-medium text-pop-black mb-6"
         >
-          From finished change
+          Branch to <span className="text-primary">PR</span>
           <br />
-          to <span className="text-primary">review-ready PR</span>
+          in <span className="text-primary">one click</span>
         </h1>
 
         {/* Sub */}
@@ -41,8 +41,8 @@ export function Hero() {
           className="text-[16px] text-pop-muted leading-relaxed mb-10 max-w-[480px] mx-auto font-medium"
           style={{ animation: "heroFadeUp 0.55s ease 0.32s both" }}
         >
-          RepoFox guides branch, commit, push, and an editable PR draft inside
-          VS Code. You approve every meaningful decision.
+          RepoFox kills the 20-minute Git grind. Branch, commit, push, and open
+          a PR — one keystroke, done.
         </p>
 
         {/* CTA */}

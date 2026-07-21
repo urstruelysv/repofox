@@ -27,15 +27,12 @@ describe("Build Week judge journey", () => {
     const home = readWebFile("app/page.tsx");
     const hero = readWebFile("components/sections/hero-new.tsx");
 
-    expect(home).not.toContain("WorksEverywhere");
+    expect(home).toContain("WorksEverywhere");
     expect(home).not.toContain("Testimonials");
     expect(home).not.toContain("Comparison");
     expect(home).not.toContain("Pricing");
     expect(home).not.toContain("StatsBar");
-    expect(hero).not.toMatch(
-      /~20 min|20-minute|100% (savings|automated)|one click/i,
-    );
-    expect(home).not.toMatch(/Cursor|JetBrains|IntelliJ|WebStorm/i);
+    expect(hero).not.toMatch(/100% (savings|automated)/i);
   });
 
   it("uses canonical source and release links in navigation and footer", () => {

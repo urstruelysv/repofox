@@ -38,8 +38,8 @@ export function Features() {
         {/* 2 — Snapshot system */}
         <FeatureRow
           eyebrow="Snapshot system"
-          headline="Every step snapshotted. Any step revertible."
-          body="Before every operation RepoFox writes the complete git state — branch ref, index, working tree, conflict markers — to .git/refs/repofox/. One click restores that exact state atomically. This is the trust feature that makes handing over git control feel safe."
+          headline="Every step is snapshotted."
+          body="RepoFox captures a snapshot before every git mutation. Revert is available during an active session; support for reverting completed sessions is in progress."
           reverse
         >
           <div className="flex flex-col gap-2.5">
@@ -102,8 +102,8 @@ export function Features() {
             ))}
             <div className="px-3.5 py-2.5 bg-green-500/5 border border-green-500/10 rounded-xl mt-1">
               <div className="text-[12px] text-pop-muted">
-                Revert any step → restores branch ref + index + working tree
-                atomically
+                During an active session → restore branch ref + index + working
+                tree from a snapshot
               </div>
             </div>
           </div>
