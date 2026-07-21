@@ -8,10 +8,10 @@ export const tokens = {
     border: {
       default: "#333333",
       subtle: "#3a3a3a",
-      focus: "#4F46E5",
+      focus: "#4338CA"  ,
     },
     accent: {
-      primary: "#4F46E5",
+      primary: "#4338CA",
       hover: "#4338CA",
       active: "#3730A3",
     },

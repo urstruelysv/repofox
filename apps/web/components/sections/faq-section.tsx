@@ -20,7 +20,7 @@ export function FAQSection() {
     },
     {
       q: "Can I undo a workflow step?",
-      a: "RepoFox records operations and captures snapshots so supported workflow steps can be reviewed and reverted from Operations History.",
+      a: "Yes, during an active workflow session. Reverting a completed session is coming soon.",
     },
     {
       q: "What licence is RepoFox?",

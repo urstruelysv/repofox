@@ -22,8 +22,8 @@ export function Features() {
               { c: "#10b981", t: "✓ Last 50 commits loaded" },
               { c: "#10b981", t: "✓ Branch patterns: feat/, fix/, chore/" },
               { c: "#10b981", t: "✓ PR style: conventional commits" },
-              { c: "#4F46E5", t: "" },
-              { c: "#4F46E5", t: "→ Generating branch name..." },
+              { c: "var(--primary)", t: "" },
+              { c: "var(--primary)", t: "→ Generating branch name..." },
               { c: "#171717", t: "  feat/add-jwt-middleware" },
               { c: "#a0a0ab", t: "" },
               { c: "#a0a0ab", t: "→ Generating commit message..." },
@@ -38,8 +38,8 @@ export function Features() {
         {/* 2 — Snapshot system */}
         <FeatureRow
           eyebrow="Snapshot system"
-          headline="Every step snapshotted. Any step revertible."
-          body="Before every operation RepoFox writes the complete git state — branch ref, index, working tree, conflict markers — to .git/refs/repofox/. One click restores that exact state atomically. This is the trust feature that makes handing over git control feel safe."
+          headline="Every step is snapshotted."
+          body="RepoFox captures a snapshot before every git mutation. Revert is available during an active session; support for reverting completed sessions is in progress."
           reverse
         >
           <div className="flex flex-col gap-2.5">
@@ -102,8 +102,8 @@ export function Features() {
             ))}
             <div className="px-3.5 py-2.5 bg-green-500/5 border border-green-500/10 rounded-xl mt-1">
               <div className="text-[12px] text-pop-muted">
-                Revert any step → restores branch ref + index + working tree
-                atomically
+                During an active session → restore branch ref + index + working
+                tree from a snapshot
               </div>
             </div>
           </div>
@@ -121,7 +121,7 @@ export function Features() {
                 who: "Your machine",
                 to: "Groq / OpenAI / Anthropic",
                 note: "AI calls direct",
-                color: "#4F46E5",
+                color: "var(--primary)",
               },
               {
                 who: "Your machine",

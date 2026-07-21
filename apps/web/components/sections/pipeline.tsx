@@ -32,7 +32,7 @@ export function Pipeline() {
             The pipeline
           </div>
           <h2 className="text-[clamp(28px,4vw,38px)] font-medium tracking-[-1.9px] leading-[1.1] text-pop-black max-w-[520px]">
-            Every step is shown. Every step is revertible.
+            Every step is shown. Every step is snapshotted.
           </h2>
         </div>
 
@@ -66,7 +66,7 @@ export function Pipeline() {
                     Operations History
                   </div>
                   <div className="text-[11px] text-pop-muted">
-                    Every step · fully revertible
+                    Every step · snapshotted mid-session
                   </div>
                 </div>
               </div>
